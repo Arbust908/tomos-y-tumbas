@@ -6,12 +6,12 @@ const tourController = require('../controllers/tourController')
 router.param('id', tourController.validateID)
 
 router
-  .route(`/`)
+  .route('/')
   .get(tourController.getAllTours)
   .post(tourController.validateBody, tourController.postTours)
 
 router
-  .route(`/:id`)
+  .route('/:id')
   .get(tourController.getTourById)
   .patch(tourController.patchTourById)
   .delete(tourController.deleteTourById)

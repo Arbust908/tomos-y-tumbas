@@ -10,7 +10,19 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
-      colors: { ...colors },
+      colors: {
+        ...colors,
+        primary: 'var(--primary)',
+        secondary: 'var(--secondary)',
+        main: 'var(--main)',
+        background: 'var(--background)',
+        header: 'var(--header)',
+        accent: 'var(--accent)',
+      },
+      fontFamily: {
+        title: ['Dwarven Axe', 'serif'],
+        main: ['IMFell DWPica', 'sans-sefir'],
+      },
     },
   },
   variants: {

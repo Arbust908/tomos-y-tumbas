@@ -12,8 +12,12 @@ module.exports = {
     'plugin:prettier/recommended',
     'plugin:nuxt/recommended',
     '@nuxtjs/eslint-config-typescript',
+    'prettier',
   ],
   plugins: [],
   // add your custom rules here
-  rules: {},
+  rules: {
+    // 'comma-dangle': 0,
+    // 'vue/max-attributes-per-line': 0,
+  },
 }

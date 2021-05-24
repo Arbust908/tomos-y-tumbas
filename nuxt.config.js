@@ -17,12 +17,12 @@ export default {
           'A self-contained Nuxt front-end with a serverMiddleware API with JSON-based DB',
       },
       {
-        hid: `og:title`,
+        hid: 'og:title',
         property: 'og:title',
         content: process.env.APP_NAME || 'Nuxt Small Stack',
       },
       {
-        hid: `og:description`,
+        hid: 'og:description',
         property: 'og:description',
         content:
           process.env.DESCRIPTION ||
@@ -34,7 +34,7 @@ export default {
       //     content: `${this.gringottsUrl}/invitations/${this.invitation.data_id}.png`
       // },
       {
-        hid: `og:site_name`,
+        hid: 'og:site_name',
         property: 'og:site_name',
         content: process.env.APP_NAME || 'Nuxt Small Stack',
       },
@@ -63,7 +63,7 @@ export default {
       {
         hid: 'twitter:card',
         property: 'twitter:card',
-        content: `summary_large_image`,
+        content: 'summary_large_image',
       },
       {
         hid: 'twitter:creator',
@@ -176,4 +176,11 @@ export default {
   },
 
   build: { cache: true, parallel: true },
+
+  publicRuntimeConfig: {
+    DND_API: process.env.DND_API,
+  },
+  privateRuntimeConfig: {
+    apiSecret: process.env.API_SECRET,
+  },
 }

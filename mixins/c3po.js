@@ -15,12 +15,12 @@ export default {
     ogProtocol(meta) {
       return [
         {
-          hid: `og:title`,
+          hid: 'og:title',
           property: 'og:title',
           content: `${meta.title} | Quiero Invitar`,
         },
         {
-          hid: `og:description`,
+          hid: 'og:description',
           property: 'og:description',
           content: `${meta.description} | Quiero Invitar`,
         },
@@ -41,14 +41,14 @@ export default {
         {
           hid: 'twitter:card',
           property: 'twitter:card',
-          content: `summary_large_image`,
+          content: 'summary_large_image',
         },
       ]
     },
     urlProtocol(meta) {
       return [
         {
-          hid: `og:url`,
+          hid: 'og:url',
           property: 'og:url',
           content: this.baseUrl + this.$route.fullPath,
         },

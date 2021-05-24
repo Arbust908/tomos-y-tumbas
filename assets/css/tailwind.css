@@ -1,0 +1,39 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@font-face {
+  font-family: 'Dwarven Axe';
+  src: url('/fonts/dwarvenaxebb.otf');
+  src: url('/fonts/dwarvenaxebb.otf') format('opentype');
+  font-style: normal;
+  font-weight: normal;
+  display: swap;
+}
+@font-face {
+  font-family: 'IMFell DWPica';
+  src: url('/fonts/IMFellDWPica-Italic.ttf');
+  src: url('/fonts/IMFellDWPica-Italic.ttf') format('truetype');
+  font-style: italic;
+  font-weight: normal;
+  display: swap;
+}
+@font-face {
+  font-family: 'IMFell DWPica';
+  src: url('/fonts/IMFellDWPica-Regular.ttf');
+  src: url('/fonts/IMFellDWPica-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+  display: swap;
+}
+
+.root,
+#root,
+#docs-root {
+  --primary: #367ee9;
+  --secondary: #a0aec0;
+  --accent: #718096;
+  --background: #fff;
+  --main: #0d0106;
+  --header: #2d3748;
+}
