@@ -1,25 +1,24 @@
 const express = require('express')
 const cors = require('cors')
 const app = express()
+const sequelize = require('./db')
 
-const tourRouter = require('./routes/tourRoutes')
-const userRouter = require('./routes/userRoutes')
+const genericRouter = require('./routes/genericRoutes')
 
 app.use(express.json())
 app.use(cors())
 // >> requestDater Middleware
-app.use((req, res, next) => {
+app.use((req, _, next) => {
   req.requestTime = new Date().toISOString()
   next()
 })
 // *** Router
 const apiV1Route = ''
-app.use(`${apiV1Route}/tours`, tourRouter)
-app.use(`${apiV1Route}/users`, userRouter)
+app.use(`${apiV1Route}`, genericRouter)
 
-app.get('/echo/:what', (req, res) => {
-  res.json(req.params)
-})
+// app.get('/echo/:what', (req, res) => {
+//   res.json(req.params)
+// })
 
 module.exports = {
   path: '/api',

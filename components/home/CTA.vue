@@ -1,14 +1,17 @@
 <template>
-  <section class="text-gray-600 body-font">
-    <div class="container px-5 py-24 mx-auto flex flex-wrap items-center">
+  <section class="text-gray-600 body-font py-10">
+    <div
+      class="container px-5 py-8 md:py-24 mx-auto flex flex-wrap items-center"
+    >
       <div class="lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0 pr-0">
         <h1 class="title-font font-medium text-3xl text-gray-900">
-          Slow-carb next level shoindcgoitch ethical authentic, poko scenester
+          Si queres ser parte de algo constantemente mutando y para divertirse.
+          Sumate!
         </h1>
-        <p class="leading-relaxed mt-4">
+        <!-- <p class="leading-relaxed mt-4">
           Poke slow-carb mixtape knausgaard, typewriter street art gentrify
           hammock starladder roathse. Craies vegan tousled etsy austin.
-        </p>
+        </p> -->
       </div>
       <div
         class="
@@ -24,12 +27,9 @@
           md:mt-0
         "
       >
-        <h2 class="text-gray-900 text-lg font-medium title-font mb-5">
-          Sign Up
-        </h2>
         <div class="relative mb-4">
           <label for="full-name" class="leading-7 text-sm text-gray-600"
-            >Full Name</label
+            >Nombre</label
           >
           <input
             id="full-name"
@@ -94,10 +94,10 @@
             text-lg
           "
         >
-          Button
+          Sumate
         </button>
         <p class="text-xs text-gray-500 mt-3">
-          Literally you probably haven't heard of them jean shorts.
+          Podes esperar reglas y sugerencias todos los meses.
         </p>
       </div>
     </div>

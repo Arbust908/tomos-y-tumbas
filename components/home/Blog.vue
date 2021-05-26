@@ -15,9 +15,9 @@
       <BlogFeatureCard class="md:w-1/2" />
       <BlogFeatureCard class="md:w-1/2" />
     </div>
-    <div class="flex flex-wrap mx-12 divide-y">
+    <!-- <div class="flex flex-wrap mx-12 divide-y">
       <BlogPostCard />
       <BlogPostCard />
-    </div>
+    </div> -->
   </section>
 </template>

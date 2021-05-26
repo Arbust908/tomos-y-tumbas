@@ -1,24 +1,34 @@
-const Sequelize = require('sequelize')
-const sequelize = new Sequelize('tomos-y-tumbas', 'tyt', 'tomosytumbas', {
-  host: 'localhost',
-  dialect: 'mariadb',
-})
-/* one of 'mysql' | 'mariadb' | 'postgres' | 'mssql' */
-// $host = '127.0.0.1'
-// $port = 3306
-// $socket = ''
-// $user = 'root'
-// $password = ''
-// $dbname = 'tomos-y-tumbas'
+import { Sequelize } from 'sequelize'
+
+const sequelize = new Sequelize(
+  process.env.DB_NAME,
+  process.env.DB_USER,
+  process.env.DB_PASS,
+  {
+    host: process.env.DB_HOST,
+    port: Number(process.env.DB_PORT) || 3306,
+    dialect: 'mysql',
+    define: {
+      charset: 'utf8mb4',
+      collate: 'utf8mb4_general_ci',
+    },
+    pool: {
+      max: 7,
+      min: 2,
+      idle: 10000,
+      acquire: 30000,
+    },
+    logging: console.log,
+  }
+)
 
 sequelize
   .authenticate()
   .then(() => {
-    console.log('Connection established successfully.')
+    console.log('Connection to -- MySQL -- established')
   })
   .catch((err) => {
     console.error('Unable to connect to the database:', err)
   })
-  .finally(() => {
-    sequelize.close()
-  })
+
+export default sequelize

@@ -1,5 +1,5 @@
 <template>
-  <section class="text-gray-600 body-font">
+  <section class="text-gray-600 py-10">
     <div class="container px-5 py-6 mx-auto">
       <h1
         class="
@@ -11,7 +11,7 @@
           mb-10
         "
       >
-        Algunos de nuestros Tomos <br class="hidden sm:block" >Para elegir y
+        Algunos de nuestros Tomos <br class="hidden sm:block" />Para elegir y
         combinar
       </h1>
       <div

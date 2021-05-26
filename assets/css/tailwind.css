@@ -37,3 +37,33 @@
   --main: #0d0106;
   --header: #2d3748;
 }
+
+@media (prefers-reduced-data: reduce) {
+  /* Stuff for reduced data preferences */
+  :root {
+    --nomotion: none;
+  }
+}
+
+@media (prefers-reduced-data: no-preference) {
+  /* Stuff for no data preferences */
+  :root {
+    --nomotion: none;
+  }
+}
+
+html {
+  scroll-behavior: var(--nomotion, smooth);
+}
+
+/* .theme-light {
+  --background: #fff;
+  --main: #0d0106;
+  --header: #2d3748;
+}
+
+.theme-dark {
+  --background: #0e141b;
+  --main: #ffffff;
+  --header: #eaeaea;
+} */

@@ -183,4 +183,12 @@ export default {
   privateRuntimeConfig: {
     apiSecret: process.env.API_SECRET,
   },
+
+  // typescript: {
+  //   typeCheck: {
+  //     eslint: {
+  //       files: './**/*.{ts,js,vue}',
+  //     },
+  //   },
+  // },
 }

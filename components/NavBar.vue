@@ -1,7 +1,6 @@
 <template>
   <header
     class="
-      text-warmGray-600
       body-font
       bg-trueGray-200 bg-opacity-50
       backdrop-filter backdrop-blur-md
@@ -26,23 +25,40 @@
           title-font
           font-medium
           items-center
-          text-warmGray-900
+          text-warmGray-800
           mb-4
           md:mb-0
-          hover:text-warmGray-600
+          hover:text-orange-700
         "
       >
         <span class="ml-3 text-3xl font-title">Tomos y Tumbas</span>
       </nuxt-link>
       <nav
-        class="md:ml-auto flex flex-wrap items-center text-base justify-center"
+        class="
+          md:ml-auto
+          flex flex-wrap
+          items-center
+          text-base
+          justify-center
+          text-warmGray-600
+        "
       >
-        <a class="mr-5 hover:text-warmGray-600">Que es?</a>
-        <!-- <a class="mr-5 hover:text-warmGray-900">Second Link</a>
-        <a class="mr-5 hover:text-warmGray-900">Third Link</a>
-        <a class="mr-5 hover:text-warmGray-900">Fourth Link</a> -->
+        <a
+          v-if="$route.path === '/'"
+          href="#what"
+          class="mr-5 hover:text-orange-700 hover:bg-warmGray-100"
+        >
+          Que es?
+        </a>
+        <nuxt-link
+          to="/my_rules"
+          class="mr-5 hover:text-orange-700 hover:bg-warmGray-100"
+        >
+          Mis Reglas
+        </nuxt-link>
       </nav>
       <button
+        v-if="false"
         class="
           inline-flex
           items-center
@@ -63,3 +79,15 @@
     </div>
   </header>
 </template>
+
+<script lang="ts">
+import { Vue, Component } from 'vue-property-decorator'
+
+@Component
+class NavBar extends Vue {
+  mounted() {
+    console.log(this.$route.path)
+  }
+}
+export default NavBar
+</script>
