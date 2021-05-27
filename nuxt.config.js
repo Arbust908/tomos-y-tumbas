@@ -3,6 +3,7 @@ export default {
     port: process.env.PORT,
     host: '0.0.0.0',
   },
+  modern: true,
 
   head: {
     title: process.env.APP_NAME || 'Nuxt Small Stack',

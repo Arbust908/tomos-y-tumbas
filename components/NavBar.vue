@@ -57,25 +57,7 @@
           Mis Reglas
         </nuxt-link>
       </nav>
-      <button
-        v-if="false"
-        class="
-          inline-flex
-          items-center
-          bg-warmGray-100
-          border-0
-          py-1
-          px-3
-          focus:outline-none
-          hover:bg-warmGray-200
-          rounded
-          text-base
-          mt-4
-          md:mt-0
-        "
-      >
-        Registrarse
-      </button>
+      <UiBtn text="Registrate" />
     </div>
   </header>
 </template>
@@ -84,10 +66,6 @@
 import { Vue, Component } from 'vue-property-decorator'
 
 @Component
-class NavBar extends Vue {
-  mounted() {
-    console.log(this.$route.path)
-  }
-}
+class NavBar extends Vue {}
 export default NavBar
 </script>
